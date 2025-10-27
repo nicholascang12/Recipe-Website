@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Finder & Meal Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Recipe Finder & Meal Planner</h1>
+    <div class="row">
+      <input id="q" type="text" placeholder="Search by name or ingredient (e.g., 'chicken' or 'garlic')" />
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="veg">Vegetarian</option>
+        <option value="quick">Quick (&lt; 25 min)</option>
+      </select>
+      <button id="clearData" class="ghost" title="Clear saved plan & favorites">Clear Saved Data</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Browse Recipes</h2>
+      <div id="list" class="grid"></div>
+    </section>
+
+    <section class="section">
+      <h2>Weekly Plan</h2>
+      <div class="pad">
+        <table id="planTable" aria-label="Weekly meal plan">
+          <tbody></tbody>
+        </table>
+        <div class="muted" style="margin-top:8px">Tip: Add a recipe to a day using the dropdown on a recipe card.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>⭐ Favorite Recipes</h2>
+      <div id="favs" class="pad"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
