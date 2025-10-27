@@ -1,0 +1,60 @@
+:root {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --accent: #3b82f6;
+  --ring: rgba(59,130,246,.35);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--ink);
+  background: var(--bg);
+}
+header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--card); border-bottom: 1px solid #e5e7eb;
+  padding: 14px 16px; display: grid; gap: 8px;
+}
+header h1 { margin: 0; font-size: 20px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+input[type="text"], select {
+  padding: 10px 12px; border: 1px solid #e5e7eb; border-radius: 10px; min-width: 220px;
+}
+input[type="text"]:focus, select:focus {
+  outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--ring);
+}
+button {
+  padding: 10px 12px; border: 1px solid #e5e7eb; background: var(--card);
+  border-radius: 10px; cursor: pointer;
+}
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+button.ghost { background: transparent; }
+main { max-width: 1100px; margin: 20px auto; padding: 0 16px; display: grid; gap: 16px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.card {
+  background: var(--card); border: 1px solid #e5e7eb; border-radius: 14px;
+  overflow: hidden; display: grid;
+}
+.card img { width: 100%; height: 140px; object-fit: cover; background: #eef2ff; }
+.card .pad { padding: 12px; display: grid; gap: 6px; }
+.title { font-weight: 700; }
+.muted { color: var(--muted); font-size: 13px; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { background: #f3f4f6; font-size: 12px; padding: 4px 8px; border-radius: 9999px; }
+.card .row { align-items: center; justify-content: space-between; }
+
+.section { background: var(--card); border: 1px solid #e5e7eb; border-radius: 14px; }
+.section h2 { margin: 0; padding: 12px 14px; border-bottom: 1px solid #e5e7eb; font-size: 16px; }
+.section .pad { padding: 12px 14px; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { border-top: 1px dashed #e5e7eb; padding: 10px; text-align: left; vertical-align: top; }
+th { width: 120px; color: var(--muted); font-weight: 600; }
+
+.pill { padding: 2px 8px; font-size: 12px; border-radius: 999px; background: #f3f4f6; display: inline-block; }
+
+footer { text-align: center; color: var(--muted); font-size: 12px; padding: 30px 0 60px; }
